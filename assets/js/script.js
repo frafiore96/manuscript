@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const navList = document.querySelector('.nav-list');
 
   hamburgerMenu.addEventListener('click', function () {
-    navList.classList.toggle('show'); // Add/remove'show' when hamburge menu is clicked
+    navList.classList.toggle('show'); // Add/remove'show' when hamburger menu is clicked
   });
 });
 
@@ -66,7 +66,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
   });
-  
-  
-  
-  
