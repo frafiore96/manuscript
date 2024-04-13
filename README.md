@@ -2,7 +2,7 @@
 
 # <h1>ManuScript</h1>
 
-<p>ManuScript è un'applicazione web con l'obiettivo di incentivare la lettura di libri attraverso il servizio esterno Open Library. <br>
+<p>ManuScript è un'applicazione che ha l'obiettivo di incentivare la lettura di libri attraverso il servizio esterno Open Library. <br>
 Puoi accedere all'app <a href="https://manuscript-ff.netlify.app">qui</a>.</p>
 
 
@@ -14,7 +14,7 @@ Puoi accedere all'app <a href="https://manuscript-ff.netlify.app">qui</a>.</p>
 <p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
 ## Come usare
-Per utilizzare l'applicazione, basta aprire l'app: <a href="https://manuscript-ff.netlify.app">Manuscrip</a>in un browser web. <br>
+Per utilizzare l'applicazione, basta aprire l'app: <a href="https://manuscript-ff.netlify.app">Manuscript</a>in un browser web. <br>
 È possibile inserire una categoria o una parola chiave nella casella di ricerca e premere il pulsante "Cerca Libri". <br>
 I risultati verranno visualizzati sotto la casella di ricerca.
 
@@ -30,7 +30,7 @@ I risultati verranno visualizzati sotto la casella di ricerca.
 - HTML
 - CSS
 - JavaScript
-- Intelligenza Artificiale (ChatGPT, Codeium)
+- Intelligenza Artificiale (ChatGPT, Codeium) per debug
 
 <p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
@@ -40,8 +40,8 @@ I risultati verranno visualizzati sotto la casella di ricerca.
 
 - Desktop e Monitor > 1280px
 - Smartphone piccole dimensioni < 480px
-- Smartphone orizzontali e Tablet > 481px < 768px
-- Tablet orizzontali, Desktop e Monitor di piccole dimensioni > 769px < 1279px
+- Smartphone orizzontali e Tablet > 481px < 1280px
+
 
 <p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
