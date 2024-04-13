@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function searchBooks() {
       const category = searchInput.value.toLowerCase();
       const apiUrl = `https://openlibrary.org/subjects/${category}.json`;
+
+      bookListDiv.innerHTML = '';
   
       fetch(apiUrl)
         .then(response => {
