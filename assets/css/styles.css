@@ -245,4 +245,7 @@ p{
       margin-top: 50px;
     }
     }
-
+    .highlight:focus {
+      background-color: #4c9aee;
+      color: white;
+    }
