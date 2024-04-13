@@ -29,13 +29,12 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-right:20px;
 }
 .nav-list li{
   margin-left: 20px;
 }
 .nav-list li:last-child {
-  margin-right: 20px;
+  margin-right: 0;
 }
 .nav-list a {
   color:white;
