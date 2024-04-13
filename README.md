@@ -22,7 +22,7 @@ I risultati verranno visualizzati sotto la casella di ricerca.
 
 ## Homepage
 
-<a href="https://manuscript-ff.netlify.app"><img src="assets/img/screenshot.png" alt="homepage"></a>
+<a href="https://manuscript-ff.netlify.app"><img src="assets/img/screenshot.png"></a>
 
 <p align="right">(<a href="#readme-top">Torna su</a>)</p> 
 
