@@ -8,6 +8,9 @@
 body {
   text-align: center;
 }
+
+/* Header, Logo and Nav-bar*/
+
 .header {
   display:flex;
   background-color:#4c9aee;
@@ -47,6 +50,8 @@ body {
   width: 150px;
   cursor:pointer;
 }
+
+/* Text Style */
 h1{
   font-size: 65px;
   color: black;
@@ -58,6 +63,8 @@ p{
   font-style:italic;
   font-weight: 300;
 }
+
+/* Search-box and bottom style */
 .search-box {
     border: 1px solid #ccc;
     border-radius: 50px;
@@ -85,6 +92,8 @@ p{
     border-color: #007bff;
     box-shadow: 0 0 5px #007bff;
   }
+
+  /* Book box style */
   .highlight {
     background-color: lightgrey;
   }
@@ -117,7 +126,7 @@ p{
       width: 30px;
       height: 20px;
       cursor: pointer;
-      margin-right: 20px; /* Aggiunta di un margine a destra */
+      margin-right: 20px;
     }
     
     /* Stili per le barre dell'hamburger menu */
@@ -127,33 +136,27 @@ p{
       background-color: white;
     }
     
-    /* Nascondi il menu di default */
     .nav-list {
       display: none;
       margin-bottom:50px;
     }
-    
-    /* Mostra il menu quando la classe 'show' è presente */
     .nav-list.show {
       display: flex;
       flex-direction: column;
       text-decoration: underline;
       text-decoration-color: white;
       list-style-type: none;
-      position: absolute; /* Posizionamento assoluto */
-      top: 40px; /* Distanza dall'alto */
-      right: 0px; /* Distanza dalla destra */
-      background-color: #4c9aee; /* Colore di sfondo */
-      padding: 10px; /* Spaziatura interna */
+      position: absolute; 
+      top: 40px; 
+      right: 0px; 
+      background-color: #4c9aee;
+      padding: 10px;
       margin-top: 10px;
     }
-   
-    /* Stili per i link del menu */
     .nav-list.show li {
-      margin-bottom: 10px; /* Spaziatura tra i link */
+      margin-bottom: 10px;
       cursor:pointer;
     }
-    
     .nav-list.show a {
       margin-right:10px;
       color: white;
@@ -192,7 +195,7 @@ p{
       width: 30px;
       height: 20px;
       cursor: pointer;
-      margin-right: 20px; /* Aggiunta di un margine a destra */
+      margin-right: 20px;
     }
     
     /* Stili per le barre dell'hamburger menu */
@@ -202,32 +205,27 @@ p{
       background-color: white;
     }
     
-    /* Nascondi il menu di default */
+
     .nav-list {
       display: none;
     }
-    
-    /* Mostra il menu quando la classe 'show' è presente */
     .nav-list.show {
       display: flex;
       flex-direction: column;
       text-decoration: underline;
       text-decoration-color: white;
       list-style-type: none;
-      position: absolute; /* Posizionamento assoluto */
-      top: 40px; /* Distanza dall'alto */
-      right: 0px; /* Distanza dalla destra */
-      background-color: #4c9aee; /* Colore di sfondo */
-      padding: 10px; /* Spaziatura interna */
+      position: absolute; 
+      top: 40px;
+      right: 0px; 
+      background-color: #4c9aee;
+      padding: 10px;
       margin-top: 10px;
     }
-   
-    /* Stili per i link del menu */
     .nav-list.show li {
-      margin-bottom: 10px; /* Spaziatura tra i link */
+      margin-bottom: 10px;
       cursor:pointer;
     }
-    
     .nav-list.show a {
       margin-right:10px;
       color: white;
