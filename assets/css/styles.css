@@ -63,6 +63,9 @@ p{
   font-style:italic;
   font-weight: 300;
 }
+.loading {
+  margin-top: 20px;
+}
 
 /* Search-box and bottom style */
 .search-box {

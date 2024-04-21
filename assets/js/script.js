@@ -1,70 +1,81 @@
-//Hamburger menu on mobile and tablet devices
 document.addEventListener('DOMContentLoaded', function () {
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  const navList = document.querySelector('.nav-list');
+  const searchInput = document.getElementById('searchInput');
+  const bookListDiv = document.getElementById('bookList');
+  const searchButton = document.querySelector('button');
+  const loadingIndicator = document.getElementById('loading'); // Aggiungi l'elemento di caricamento
 
-  hamburgerMenu.addEventListener('click', function () {
-    navList.classList.toggle('show'); // Add/remove'show' when hamburger menu is clicked
+  searchButton.addEventListener('click', searchBooks);
+
+  searchInput.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        searchBooks();
+    }
   });
-});
 
-//Search engine
-document.addEventListener('DOMContentLoaded', function () {
-    const searchInput = document.getElementById('searchInput');
-    const bookListDiv = document.getElementById('bookList');
-    const searchButton = document.querySelector('button');
-  
-    searchButton.addEventListener('click', searchBooks);
-  
-    function searchBooks() {
+  function searchBooks() {
       const category = searchInput.value.toLowerCase();
       const apiUrl = `https://openlibrary.org/subjects/${category}.json`;
 
       bookListDiv.innerHTML = '';
-  
+      loadingIndicator.innerHTML = 'Caricamento...'
+      loadingIndicator.style.display = 'block'; // Mostra l'indicatore di caricamento
+
       fetch(apiUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Errore nella richiesta');
-          }
-          return response.json();
-        })
-        .then(data => {
-          const books = data.works || [];
-          books.forEach(book => {
-            const title = book.title;
-            const authors = book.authors.map(author => author.name).join(', ');
-            const bookDiv = document.createElement('div');
-            bookDiv.classList.add('book-box');
-            bookDiv.innerHTML = `<p><strong>${title}</strong> - ${authors}</p>`;
-            bookDiv.addEventListener('mouseenter', () => bookDiv.classList.add('highlight'));
-            bookDiv.addEventListener('mouseleave', () => bookDiv.classList.remove('highlight'));
-            bookDiv.addEventListener('click', () => fetchBookDescription(book.key));
-            bookListDiv.classList.add('book-list-box');
-            bookListDiv.appendChild(bookDiv);
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Errore nella richiesta');
+              }
+              return response.json();
+          })
+          .then(data => {
+              const books = data.works || [];
+              books.forEach(book => {
+                  const title = book.title;
+                  const authors = book.authors.map(author => author.name).join(', ');
+                  const bookDiv = document.createElement('div');
+                  bookDiv.classList.add('book-box');
+                  bookDiv.innerHTML = `<p><strong>${title}</strong> - ${authors}</p>`;
+                  bookDiv.addEventListener('mouseenter', () => bookDiv.classList.add('highlight'));
+                  bookDiv.addEventListener('mouseleave', () => bookDiv.classList.remove('highlight'));
+                  bookDiv.addEventListener('click', () => fetchBookDescription(book.key));
+                  bookListDiv.classList.add('book-list-box');
+                  bookListDiv.appendChild(bookDiv);
+              });
+              loadingIndicator.style.display = 'none'; // Nascondi l'indicatore di caricamento dopo il completamento
+          })
+          .catch(error => {
+              console.error('Si è verificato un errore:', error);
+              loadingIndicator.style.display = 'none'; // Assicurati che l'indicatore di caricamento venga nascosto anche in caso di errore
           });
-        })
-        .catch(error => {
-          console.error('Si è verificato un errore:', error);
-        });
-    }
-  
-    function fetchBookDescription(key) {
+  }
+
+  function fetchBookDescription(key) {
       const apiUrl = `https://openlibrary.org${key}.json`;
-  
+
       fetch(apiUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Errore nella richiesta');
-          }
-          return response.json();
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Errore nella richiesta');
+              }
+              return response.json();
+          })
+          .then(data => {
+            let description = data.description;
+
+            // Verifica se la descrizione è un oggetto
+            if (typeof description === 'object') {
+                // Se è un oggetto, converte la descrizione in una stringa
+                description = JSON.stringify(description);
+            }
+            else if (typeof description === 'string' && description.startsWith('http')) {
+              description = 'Descrizione non disponibile';
+            }
+            // Visualizza la descrizione
+            alert(description || 'Descrizione non disponibile');
         })
-        .then(data => {
-          const description = data.description || 'Descrizione non disponibile';
-          alert(description);
-        })
-        .catch(error => {
-          console.error('Si è verificato un errore:', error);
-        });
-    }
-  });
+          .catch(error => {
+              console.error('Si è verificato un errore:', error);
+          });
+  }
+});
+
