@@ -50,4 +50,3 @@ I risultati verranno visualizzati sotto la casella di ricerca.
 Francesco Fiorentino - [LinkedIn](https://www.linkedin.com/in/francesco-fiorentino-8a854216a/)
 
 <p align="right">(<a href="#readme-top">Torna su</a>)</p> 
-
