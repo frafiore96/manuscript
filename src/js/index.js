@@ -1,7 +1,7 @@
-import '../css/styles.css';
-import logoFn from './logo.js';
+//import '../css/styles.css';
+//import logoFn from './logo.js';
 
-document.addEventListener('DOMContentLoaded', logoFn());
+//document.addEventListener('DOMContentLoaded', logoFn());
 
 
 // Hamburger menu creation

@@ -1,11 +1,11 @@
-import logoImg from '../img/logo-manuscript.png';
-import '../css/styles.css';
+//import logoImg from '../img/logo-manuscript.png';
+//import '../css/styles.css';
 
-function logo(){
-    const logoDomImg = document.querySelector('.logo img');
-    logoDomImg.src = logoImg;
-    logoDomImg.className = '.logo img';
-    return logoDomImg;
-}
+//function logo(){
+//    const logoDomImg = document.querySelector('.logo img');
+//    logoDomImg.src = logoImg;
+//    logoDomImg.className = '.logo img';
+//    return logoDomImg;
+//}
 
-export default logo;
+//export default logo;
