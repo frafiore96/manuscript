@@ -1,4 +1,9 @@
 import '../css/styles.css';
+import logoFn from './logo.js';
+
+document.addEventListener('DOMContentLoaded', logoFn());
+
+
 // Hamburger menu creation
 document.addEventListener('DOMContentLoaded', function () {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
