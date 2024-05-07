@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function displayBookDescriptionOnScreen(data) {
     let description = data.description;
     if (typeof description === 'object') {
-        description = JSON.stringify(description);
+        description = description.value || 'Descrizione non disponibile';
     } else if (typeof description === 'string' && description.startsWith('http')) {
         description = 'Descrizione non disponibile';
     }
